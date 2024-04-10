@@ -43,4 +43,6 @@ return require('packer').startup(function(use)
 	  "williamboman/mason-lspconfig.nvim",
 	  "neovim/nvim-lspconfig",
   }
+
+  use 'nvim-tree/nvim-tree.lua'
 end)

@@ -1,6 +1,5 @@
 local lsp_zero = require('lsp-zero')
 
-
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
@@ -27,6 +26,12 @@ require("mason-lspconfig").setup({
 local cmp = require('cmp')
 
 cmp.setup({
-    ['<Enter>'] = cmp.mapping.confirm({select = true}),
+    completion = { -- start on the first menu item
+        completeopt = "menu,menuone,noinsert"
+    },
+
+    mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+    }),
 })
 
