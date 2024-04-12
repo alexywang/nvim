@@ -13,8 +13,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.cmd [[%s/\s\+$//e]]
         vim.api.nvim_win_set_cursor(0, save_cursor)
     end
-
 })
+
+vim.cmd("source ~/.config/nvim/lua/alex/terminal.vim")
 
 
 

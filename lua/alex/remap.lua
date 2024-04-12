@@ -17,3 +17,10 @@ vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit)
 vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true} )
 
 
+
+-- bottom pane terminal
+
+vim.keymap.set("n", "<C-t>" , ':call TermToggle(12)<CR>', { noremap = true, silent = true })
+vim.keymap.set("t", "<C-t>" , "<C-\\><C-n>:call TermToggle(13)<CR>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-t>" , "<Esc>:call TermToggle(12)<CR>", { noremap = true, silent = true })
+
