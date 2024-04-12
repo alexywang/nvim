@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   }
 
   use { "ellisonleao/gruvbox.nvim" }
+  use { 'luisiacc/gruvbox-baby' }
 
   use {
 	  'nvim-treesitter/nvim-treesitter',
@@ -45,4 +46,11 @@ return require('packer').startup(function(use)
   }
 
   use 'nvim-tree/nvim-tree.lua'
+
+  -- showing tabs
+  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+  use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+  use 'romgrk/barbar.nvim'
+  
+  use 'tpope/vim-rails'
 end)

@@ -6,6 +6,6 @@ require("alex.set")
 require("nvim-tree").setup()
 
 vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme gruvbox-baby]])
 
 
