@@ -13,6 +13,7 @@ require("mason-lspconfig").setup({
 		"eslint",
 		"lua_ls",
 		"rust_analyzer",
+    "solargraph",
 	},
 	handlers = {
 		function(server_name)

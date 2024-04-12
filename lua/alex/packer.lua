@@ -53,4 +53,5 @@ return require('packer').startup(function(use)
   use 'romgrk/barbar.nvim'
   
   use 'tpope/vim-rails'
+  use 'github/copilot.vim'
 end)
