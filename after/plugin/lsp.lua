@@ -6,6 +6,10 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+local lspconfig = require('lspconfig')
+
+require('lspconfig-bundler').setup()
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
@@ -19,6 +23,17 @@ require("mason-lspconfig").setup({
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
 		end,
+    ["solargraph"] = function()
+      require('lspconfig').solargraph.setup({
+        --cmd = { "bundle exec solargraph", "stdio" },
+        settings = {
+          solargraph = {
+            diagnostics = true,
+            useBundler = true
+          },
+        },
+      })
+    end,
 	},
 })
 

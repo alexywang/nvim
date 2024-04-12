@@ -17,12 +17,11 @@ return require('packer').startup(function(use)
   use { "ellisonleao/gruvbox.nvim" }
   use { 'luisiacc/gruvbox-baby' }
 
+  -- lsp/syntax
   use {
 	  'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'
   }
-
-  use { 'theprimeagen/harpoon' }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -38,20 +37,25 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
-
   use {
 	  "williamboman/mason.nvim",
 	  "williamboman/mason-lspconfig.nvim",
 	  "neovim/nvim-lspconfig",
   }
+  use 'github/copilot.vim'
+  use { 'mihyaeru21/nvim-lspconfig-bundler' }
 
+
+  -- appearance
+  use "lukas-reineke/indent-blankline.nvim"
+  --
+
+  -- tabs
   use 'nvim-tree/nvim-tree.lua'
-
-  -- showing tabs
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
-  
+
+  -- ruby
   use 'tpope/vim-rails'
-  use 'github/copilot.vim'
 end)

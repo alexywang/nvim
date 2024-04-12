@@ -5,9 +5,6 @@ require("alex.set")
 -- empty setup using defaults
 require("nvim-tree").setup()
 
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox-baby]])
-
 -- strip trailing whitespace
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
@@ -16,6 +13,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.cmd [[%s/\s\+$//e]]
         vim.api.nvim_win_set_cursor(0, save_cursor)
     end
+
 })
 
 

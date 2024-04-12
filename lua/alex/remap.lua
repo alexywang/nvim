@@ -14,6 +14,6 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- split panes
 vim.keymap.set("n", "<leader>sv", vim.cmd.split)
 vim.keymap.set("n", "<leader>ss", vim.cmd.vsplit)
-vim.keymap.set("n", "<C-s>", ":wincmd w<CR>")
+vim.keymap.set("n", "<C-e>", ":wincmd w<CR>", { noremap = true} )
 
 
